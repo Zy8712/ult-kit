@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Useful Design Resources for Developers</title> <!-- Add Title -->
+  <link rel="icon" type="image/x-icon" href="./main/images/web-development.png" /> <!-- Add Browser Icon -->
+
+  <link rel="stylesheet" type="text/css" href="./main/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="./main/css/aos.css" />
+  <link rel="stylesheet" type="text/css" href="./main/css/line-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="./main/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="./main/css/box-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  integrity="sha512-pjI1+7GlPIETBpPtcyldI3H8tq+3gMToXAQ2Mf0eLJJw1mIh35pO/xVL0gRx/pXoIHY3qF1fJg2dOFN1aTQ2VQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<!-- Scrollspy. Automatically update Bootstrap navigation or list group components
+based on scroll position to indicate which link is currently active in the viewport.
+https://getbootstrap.com/docs/5.0/components/scrollspy/ -->
+<body data-bs-spy="scroll" data-target=".navbar">
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top"> <!-- fixed-top ensures that content is not pushed below it -->
+    <div class="container flex-lg-column"> <!-- flex-lg-column changes nav to column format when window is large -->
+
+      <button type="button" id="minimize-navbar-button" class="position-absolute top-0 start-0 d-none d-lg-block">
+        <i class="las la-bars"></i> <!-- Load in three-lines menu icon -->
+      </button>
+
+      <button type="button" id="site-appearance-settings-button" class="position-absolute bottom-0 start-0 d-none d-lg-block">
+        <i class="las la-cog"></i> <!-- Load in gear/settings menu icon -->
+      </button>
+
+      <a class="navbar-brand mx-lg-auto mb-lg-4" href="https://github.com/Zy8712"> <!--mb-lg-4 margin bottom 4 in large window, mx-lg-auto margin left and right auto-->
+        <span class="h3 fw-bold d-block d-lg-none">Web Design Resources</span><!--d-lg-none only shows name when window is small-->
+        <!-- Adjust border of photo. https://getbootstrap.com/docs/4.0/utilities/borders/-->
+        <img src="./main/images/web-development.png" class="d-none d-lg-block" id="profile_icon" alt="profile_pic">
+      </a>
+      <!-- code for dropdown menu when window size is small -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto flex-lg-column text-lg-center"> <!-- flex-lg-column changes nav to column format when window is large -->
+
+          <li class="nav-item"> <!-- Nav Bar Item 1 -->
+            <a class="nav-link" href="#home" title="" id="nav-option0">Home</a>
+          </li>
+
+          <li class="nav-item"> <!-- Nav Bar Item 2 -->
+            <a class="nav-link" href="#intro" title="" id="nav-option1">Intro</a>
+          </li>
+
+          <li class="nav-item"> <!-- Nav Bar Item 3 -->
+            <a class="nav-link" href="#skills" title="" id="nav-option2">Skills</a>
+          </li>
+
+          <li class="nav-item"> <!-- Nav Bar Item 4 -->
+            <a class="nav-link" href="#projects" title="" id="nav-option3">Projects</a>
+          </li>
+
+          <li class="nav-item"> <!-- Nav Bar Item 5 -->
+            <a class="nav-link" href="#about" title="" id="nav-option4">About</a>
+          </li>
+
+          <li class="nav-item"> <!-- Nav Bar Item 6 -->
+            <a class="nav-link" href="#tools" title="" id="nav-option5">Tools</a>
+          </li>
+
+          <li class="nav-item"> <!-- Nav Bar Item 7 -->
+            <a class="nav-link" href="#blog" title="" id="nav-option6">Blog</a>
+          </li>
+
+          <li class="nav-item"> <!-- Nav Bar Item 8 -->
+            <a class="nav-link" href="#contact" title="" id="nav-option7">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div id="content-wrapper" class="full-wrapper">
+
+    <button onclick="topFunction()" id="to_top" title="Go back up">
+      <img src="./main/custom/onlinewebfonts_up_arrow.svg">
+    </button>
+
+
+    <section id="home" class="full-height px-lg-5 theme1-background"> <!-- px-lg-5 adds padding to content-->
+      <div class="container"> <!-- use to  style="border: black 3px solid" to see how container works -->
+        <div class="logo-box">
+          <img src="./main/images/cooltext437111752470226.png" alt="logo1">
+          <img src="./main/images/cooltext437111799299829.png" alt="logo2">
+        </div>
+      </div>
+      <div class="arrow_container">
+        <a href="#toscroll">
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <span class="text">START EXPLORING</span>
+        </a>
+      </div>
+    </section>
+
+
+    <section id="intro" class="full-height px-lg-5">
+
+      <div class="container">
+
+        <div class="container-test"> <!-- container-test opening tag-->
+
+          <div class="panel active" id="panel1">
+            <h3><a href="" class="link-custom">UI Graphics <i class="las la-arrow-circle-right"></i></a></h3>
+          </div>
+
+          <div class="panel" id="panel2">
+            <h3><a href="" class="link-custom">Design Resources <i class="las la-arrow-circle-right"></i></a></h3>
+          </div>
+
+          <div class="panel" id="panel3">
+            <h3><a href="" class="link-custom">UI Development <i class="las la-arrow-circle-right"></i></a></h3>
+          </div>
+
+          <div class="panel" id="panel4">
+            <h3><a href="" class="link-custom">UI Components & Libraries <i class="las la-arrow-circle-right"></i></a></h3>
+          </div>
+
+          <div class="panel" id="panel5">
+            <h3><a href="" class="link-custom">Design Systems & Guides <i class="las la-arrow-circle-right"></i></a></h3>
+          </div>
+
+          <div class="panel" id="panel6">
+            <h3><a href="" class="link-custom">Optimization & Extensions <i class="las la-arrow-circle-right"></i></a></h3>
+          </div>
+
+          <div class="panel" id="panel7">
+            <h3><a href="" class="link-custom">Miscellaneous <i class="las la-arrow-circle-right"></i></a></h3>
+          </div>
+
+        </div> <!-- container-test closing tag-->
+
+      </div>
+    </section>
+
+
+    <section id="skills" class="full-height px-lg-5">
+
+      <div class="container">
+        <div class="row pb-4" data-aos="fade-up">
+          <div class="col-lg-8">
+            <h6 class="text-brand">UI GRAPHICS</h6>
+            <h2>Icons, Logos, Favicons, Vectors, Clip Art, Product Mockups, Image Mockups</h2>
+          </div>
+        </div>
+
+        <div class="row gy-4"> <!-- gy-4 add spacing to top and bottom of boxes on small windows-->
+
+          <!-- col-lg-6 takes up six of the twelve columns in this main section -->
+          <!-- essentially used to split page in half so page is more dynamic for different window sizes -->
+          <!-- see blog section for more details -->
+          <!-- this section itself will have twelve columns itself as well -->
+
+          <!-- https://getbootstrap.com/docs/4.0/layout/grid/ -->
+          <div class="col-lg-12 col-xl-6">
+            <div class="row gy-4"> <!-- make divs arrange in row layout, gy-5 adds spacing to top and bottom of boxes on small windows -->
+
+
+              <!-- col-md-4 takes up 4 columns in the twelve columns available in the Bootstrap grid format -->
+              <!-- note that this is 4 columns out of twelve in the 6 columns out of twelve that we previously used to split the page in half -->
+              <!-- essentially, split original twelve columns into two column sections of size six columns
+              and each of these two columns have themselves twelve columns worth of space distribution
+              to evenly split the columns amongst the three boxes in each they are given col-md-4 as their respective sizes -->
+              <!-- fades up quickly using AOS Library (first box to appear) -->
+              <!-- p-4 padding value of 4 out of the possible preset 5 established by Bootstrap -->
+              <!---->
+
+              <!-- Java Skills Box (Main Page) -->
+              <div class="col-md-6" data-aos="fade-up">
+                <div class="p-4 bg-base rounded-4 shadow-effect java-box-background">
+                  <div class="iconbox rounded-3">
+                    <img src="./main/custom/svgrepo-java-coloured.svg" style="height:36px; width:36px">
+                  </div>
+                  <h5 class="mt-4 mb-2"><a href="" class="link-custom">Java</a></h5>
+                </div>
+              </div>
+
+              <!-- Python Skills Box (Main Page) -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+                <div class="p-4 bg-base rounded-4 shadow-effect python-box-background">
+                  <div class="iconbox rounded-3">
+                    <img src="./main/custom/wikimedia-python-coloured.svg" style="height:36px; width:36px">
+                  </div>
+                  <h5 class="mt-4 mb-2"><a href="" class="link-custom">Python</a></h5>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- col-lg-6 takes up six of the twelve columns in this main section -->
+          <!-- essentially used to split page in half so page is more dynamic for different window sizes -->
+          <!-- see blog section for more details -->
+          <!-- this section itself will have twelve columns itself as well -->
+          <div class="col-lg-12 col-xl-6">
+            <div class="row gy-4"> <!-- make divs arrange in row layout, gy-5 adds spacing to top and bottom of boxes on small windows -->
+
+              <!-- CSS Skills Box (Main Page) -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="p-4 bg-base rounded-4 shadow-effect css-box-background">
+                  <div class="iconbox rounded-3">
+                    <img src="./main/custom/wikimedia-css3-coloured.svg" style="height:36px; width:36px">
+                  </div>
+                  <h5 class="mt-4 mb-2"><a href="" class="link-custom">CSS</a></h5>
+                </div>
+              </div>
+
+              <!-- Javascript Skills Box (Main Page) -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="450">
+                <div class="p-4 bg-base rounded-4 shadow-effect javascript-box-background">
+                  <div class="iconbox rounded-3">
+                    <img src="./main/custom/wikimedia-javascript-coloured.svg" style="height:36px; width:44px">
+                  </div>
+                  <h5 class="mt-4 mb-2"><a href="" class="link-custom">Javascript</a></h5>
+                  <h5 class="mt-4">The Effect of Twitter's New Character Limit</h5>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Back button in its own row independent of all other skills buttons -->
+        <!-- row div containing back button given a top margin of 4, mt-4, so it doesn't overlap skills blocks -->
+        <div class="row mt-4">
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-custom rounded-4 bg-base shadow-effect">
+              <div class="card-custom-content p-3">
+                <h4><a href="./alt/index-skills.html" class="link-custom">View More <i class="las la-arrow-circle-right"></i></a></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <section id="projects" class="full-height px-lg-5">
+      <div class="container">
+
+        <div class="row pb-4" data-aos="fade-up">
+          <div class="col-lg-8">
+            <h6 class="text-brand">DESIGN RESOURCES</h6>
+            <h2>Fonts, Colors, Stock Photos, Stock Videos, Stock Music, Sound Effects, etc</h2>
+          </div>
+        </div>
+
+
+
+
+        <div class="row gy-4 mt-3">
+
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-custom rounded-4 bg-base shadow-effect">
+              <div class="card-custom-content p-3">
+                <h4><a href="./alt/index-projects.html" class="link-custom">View All Archived Projects <i class="las la-arrow-circle-right"></i></a></h4>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="about" class="full-height px-lg-5">
+      <div class="container">
+        <div class="row pb-4" data-aos="fade-up">
+          <div class="col-lg-8">
+            <h6 class="text-brand">UI DEVELOPMENT</h6>
+            <h2>HTML, CSS, Javascript: Templates, Frameworks, Methodologies, Libraries, etc</h2>
+          </div>
+        </div>
+
+
+
+        <div class="row gy-4 mt-3">
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-custom rounded-4 bg-base shadow-effect">
+              <div class="card-custom-content p-3">
+                <h4><a href="./alt/index-experience.html" class="link-custom">View More Education & Experience <i class="las la-arrow-circle-right"></i></a></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <section id="tools" class="full-height px-lg-5">
+      <div class="container">
+
+        <div class="row pb-4" data-aos="fade-up">
+          <div class="col-lg-8">
+            <h6 class="text-brand">UI COMPONENTS & LIBRARIES</h6>
+            <h2>UI Components & Kits, Libraries for: React UI, Vue UI, Angular UI, Svelte UI, React Native UI</h2>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="row gy-4 mt-3">
+
+          <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-custom rounded-4 bg-base shadow-effect">
+              <div class="card-custom-content p-3">
+                <h4><a href="./alt/index-tools.html" class="link-custom">View All Tools <i class="las la-arrow-circle-right"></i></a></h4>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="blog" class="full-height px-lg-5">
+      <div class="container">
+
+        <div class="row pb-4" data-aos="fade-up">
+          <div class="col-lg-8">
+            <h6 class="text-brand">BLOG & ARTICLES OF INTEREST</h6>
+            <h1>Developmental Updates & Current Topics of Interest</h1>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+
+
+    <section id="contact" class="full-height px-lg-5 contact-background">
+      <div class="container">
+
+
+
+
+      </div>
+    </section>
+
+
+    <footer class="py-4 px-lg-5 mb-0"> <!-- py-5-->
+      <div class="container mb-0">
+
+        <!-- justify-content-between adds spacing between the credits box and the socials box -->
+        <div class="row gy-4 justify-content-between">
+
+          <div class="col-auto my-site-cred">
+            <p class="mb-0">Full Site Credits: <a href="./alt/index-credits.html" class="fw-bold link-custom">HERE</a></p>
+          </div>
+
+          <div class="col-auto">
+            <div class="social-icons">
+              <a href="https://github.com/Zy8712"><i class="lab la-github"></i></a>
+              <a href="https://www.linkedin.com/in/bryan-li-a15437250/"><i class="lab la-linkedin-in"></i></a>
+              <a href="https://leetcode.com/Zy8712/"><i class="las la-code"></i></a>
+              <a href="#"><i class="lab la-twitter"></i></a>
+              <a href="bryan.li71298@gmail.com"><i class="las la-envelope"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <script type="text/javascript" src="./main/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="./main/js/aos.js"></script>
+  <script type="text/javascript" src="./main/js/main.js"></script>
+  <script type="text/javascript" src="./main/js/prototype.js"></script>
+</body>
+</html>

@@ -1,0 +1,530 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root{
+    --color-body: #ffffff; /* white */
+    --color-heading: #eef3db; /* baige */                           /* og */
+    --color-base: #033f47; /* slightly brighter blue green */       /* og */
+    --color-base2: #6b80cc;  /* pale blue*/           
+    --color-brand: #e0f780; /* slightly less bright yellow green */ /* og */
+    --color-brand2: #deff58; /* bright yellow green */              /* og */
+    --color-body-bright: white;
+    --sidebar-width: 220px;
+    --font-base: "Bai Jamjuree";                                    /* og */
+}
+
+/* Disable side scrolling */
+/* https://stackoverflow.com/questions/17756649/disable-the-horizontal-scroll */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+  background-color: var(--color-base2);
+  color: var(--color-body);
+  font-family: var(--font-base), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: var(--color-heading);
+  font-weight: 700;
+}
+
+a{
+  text-decoration: none;
+  color: var(--color-body);
+  transition: all 0.4s ease;
+}
+
+a:hover{
+  color: var(--color-brand);
+}
+
+img{
+  width: 100%;
+}
+
+.text-brand{
+  color: var(--color-brand);
+}
+
+.bg-base{
+  background: var(--color-base);
+  /* color base: #033f47 is the same as (3, 63, 71)*/
+  /*background: rgba(3, 63, 71, 0.5);*/
+}
+
+.bg-base2{
+  background: rgba(7, 152, 171, 0.4);
+}
+
+
+
+.full-height{
+  min-height: 100vh;
+  height: 100%;
+  /* center the content of the section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid rgba(255,255,255, 0.1);
+}
+
+.logo-box{
+  overflow: hidden;
+  width: 70%;
+  margin: auto;
+}
+
+.theme1-background{
+  background-image: url(../images/peakpx-arctic.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.theme2-background{
+  background-image: url(../images/peakpx-citiscape.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.vert-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vert-center > img{
+  opacity: 0.8;
+}
+
+.vert-center > img:hover{
+  opacity: 1;
+}
+
+.shadow-effect{
+  transition: all 0.5s;
+}
+
+.shadow-effect:hover{
+  /*background: rgba(3, 63, 71, 1);*/
+  box-shadow: -6px 6px 0 0 var(--color-brand); /* from the x-axis -6 pixel, from the y-axis*/
+  opacity: 1;
+}
+
+.iconbox{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  background-color: rgba(39, 49, 56, 0.7);
+  /* background-color: rgb(7, 152, 171); */
+  /* background-color: var(--color-brand); */
+  color: var(--color-base);
+}
+
+/* NAVBAR */
+
+/* Navbar class when window size is small */
+.navbar{
+  background: linear-gradient(rgba(107,128,204, 0.4), rgba(107,128,204, 0.4)), url(../images/peakpx-arctic.jpg); /* rgba = rgb + opacity */
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar .nav-link{
+  font-weight: 700;
+  text-transform: uppercase; /* text-transform - used to change everything to uppercase or lowercase*/
+  color: white;
+}
+
+.navbar .nav-link:hover{
+  color: var(--color-brand);
+}
+
+/* changes color of text/link in navbar to active page, e.g. services text highlighted when in services section */
+/* works together with scrollspy in body tag */
+.navbar .nav-link.active {
+    color: var(--color-brand);
+}
+
+@media (min-width: 992px){ /* if browser window is equal to this or greater than, the following occurs */
+  /* Making the navbar a column with background image and opacity overlaying ontop of background image */
+  .navbar{
+    min-height: 100vh;
+    width: var(--sidebar-width);
+    /* https://www.w3schools.com/colors/colors_picker.asp */
+    background: linear-gradient(rgba(107,128,204, 0.4), rgba(107,128,204, 0.4)), url(../images/peakpx-arctic.jpg); /* rgba = rgb + opacity */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .navbar2{
+    width: 50px;
+  }
+
+  .navbar-brand2{
+    width: 0%;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+  }
+
+  .full-wrapper{
+    padding-left: var(--sidebar-width);
+  }
+
+  .content-change-wrapper{
+    padding-left: 50px;
+  }
+}
+
+.btn{
+  padding: 12px 28px;
+  font-weight: 700;
+}
+
+.btn-brand{
+  background-color: var(--color-brand);
+  border-color: var(--color-brand);
+  color: var(--color-base);
+}
+
+.btn-brand:hover,
+.btn-brand:focus{
+  background-color: var(--color-brand2);
+  color: var(--color-base);
+  border-color: var(--color-brand2);
+}
+
+
+.link-custom{
+  font-weight: 700;
+  position: relative;
+}
+
+.link-custom::after{
+  content: "";
+  width: 0%; /* animate the underline */
+  height: 2px;
+  background-color: var(--color-brand);
+  position: absolute;
+  left: 0;
+  top: 110%;
+  transition: all 0.4s; /* animate the underline */
+}
+
+/* animate the underline */
+.link-custom:hover::after{
+  width: 100%;
+}
+
+.translucent-card{
+  opacity: 0.5;
+}
+
+
+/* SETTINGS INCLUSIVE TO PROJECT & BLOG SECTION */
+.card-custom .card-custom-image{
+  overflow: hidden;
+}
+
+.card-custom .card-custom-image img{
+  transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+  transform: scale(1.1);
+}
+
+/* CONTACT */
+#contact .form-control {
+  background-color: var(--color-base);
+  opacity: 0.5;
+  border-color: var(--color-base);
+  color: var(--color-body);
+}
+
+#contact .form-control:focus {
+  border-color: var(--color-brand);
+  box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+  color: var(--color-body);
+}
+
+#contact input.form-control {
+  height: 44px;
+}
+
+.my-site-cred{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SOCIAL ICONS */
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-base);
+  border-radius: 100px;
+  font-size: 24px;
+}
+
+
+
+
+/*/////////////////////////////////*/
+/* TOP LEFT MINIMIZE NAVBAR TOGGLE */
+/*/////////////////////////////////*/
+
+#minimize-navbar-button{
+  width: 50px;                 /* width of button attribute is set to 50px */
+  height: 50px;               /* height of button attribute is set to 50px */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;    /* background of button is transparent so it matches thae current navbar background */
+  border-radius: 100px;
+  border-color: transparent;  /* border-color of button is set to transparent so no lines appear around button */
+  font-size: 24px;
+  transition-delay: 0.1s;     /* adds a delay between hovering over the button and the highlighting */
+}
+
+#minimize-navbar-button:hover{
+  border-color: rgba(107, 128, 204, 0.4);     /* border of button changes uppon hover */
+  background-color: rgba(107, 128, 204, 0.4); /* background of button changes upon hover */
+}
+
+#site-appearance-settings-button{
+  width: 50px;                 /* width of button attribute is set to 50px */
+  height: 50px;               /* height of button attribute is set to 50px */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;    /* background of button is transparent so it matches thae current navbar background */
+  border-radius: 100px;
+  border-color: transparent;  /* border-color of button is set to transparent so no lines appear around button */
+  font-size: 24px;
+  transition-delay: 0.1s;     /* adds a delay between hovering over the button and the highlighting */
+}
+
+#site-appearance-settings-button:hover{
+  border-color: rgba(166,108,192, 0.4);     /* border of button changes uppon hover */
+  background-color: rgba(166,108,192, 0.4); /* background of button changes upon hover */
+}
+
+
+/*/////////////////////////////////*/
+/* BACK TO TOP BUTTON ON MAIN PAGE */
+/*/////////////////////////////////*/
+
+#to_top {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 20px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: white; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#to_top img{
+  width: 28px; /* set width of image which also affects size of button */
+  height: 28px; /* set height of image which also affects size of button */
+}
+
+#to_top:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/******************/
+/* New Additions */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+.container-test {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.35s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+#panel1{
+  background-image: url("https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
+
+#panel2{
+  background-image: url("https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
+
+#panel3{
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80");
+}
+
+#panel4{
+  background-image: url("https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80");
+}
+
+#panel5{
+  background-image: url("https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
+
+#panel6{
+  background-image: url("https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'");
+}
+
+#panel7{
+  background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')
+}
+
+
+/**Newly Added */
+/*  https://codeconvey.com/scroll-down-arrow-animation-css/ */
+.arrow_container {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: 0px auto;
+  /*border: solid black 3px;*/
+  text-align: center;
+  align-items: center;
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -42px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+/*  border: black 3px solid;*/
+}
+
+@keyframes pulse {
+to {
+    opacity: 1;
+  }
+}
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+
+  html {
+  scroll-behavior: smooth;
+}
