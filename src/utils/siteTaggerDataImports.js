@@ -1,0 +1,21 @@
+import web_design from "@/data/site-tagging/raw-tags/web-design-tags.json";
+import coding from "@/data/site-tagging/raw-tags/coding-tags.json";
+import productivity from "@/data/site-tagging/raw-tags/productivity-tags.json";
+import entertainment from "@/data/site-tagging/raw-tags/entertainment-tags.json";
+import social_media from "@/data/site-tagging/raw-tags/social-media-tags.json";
+import multimedia from "@/data/site-tagging/raw-tags/multimedia-tags.json";
+import ai_tools from "@/data/site-tagging/raw-tags/ai-tools-tags.json";
+import security_privacy from "@/data/site-tagging/raw-tags/security-privacy-tags.json";
+import marketing_seo from "@/data/site-tagging/raw-tags/marketing-seo-tags.json";
+import financial_tools from "@/data/site-tagging/raw-tags/financial-tools-tags.json";
+
+export const web_design_tags = web_design;
+export const coding_tags = coding;
+export const productivity_tags = productivity;
+export const entertainment_tags = entertainment;
+export const social_media_tags = social_media;
+export const multimedia_tags = multimedia;
+export const ai_tools_tags = ai_tools;
+export const security_privacy_tags = security_privacy;
+export const marketing_seo_tags = marketing_seo;
+export const financial_tools_tags = financial_tools;

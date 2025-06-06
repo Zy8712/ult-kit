@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('/fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Oxanium';
+    src: url('/fonts/Oxanium-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('/fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('/fonts/Barlow-Regular.ttf') format('truetype');
+}
+
+html::-webkit-scrollbar {
+    background-color: black;
+    width: 5px;
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.1, purple), color-stop(1, blue));
+    border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar {
+    background-color: black;
+    width: 5px;
+    border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.link-custom {
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    /* animate the underline */
+    height: 2px;
+    background-color: #96C8FB;
+    position: absolute;
+    left: 0;
+    top: 105%;
+    transition: all 0.4s;
+    /* animate the underline */
+}
+
+/* animate the underline */
+.link-custom:hover::after {
+    width: 100%;
+}
+
+.link-custom:hover {
+    color: #96C8FB;
+}
+
+.custom-scroll-2::-webkit-scrollbar {
+    background-color: gray;
+    height: 0px;
+    border-radius: 10px;
+}
+
+.custom-scroll-2::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.custom-scroll-2::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.custom-scroll-3::-webkit-scrollbar {
+    background-color: black;
+    width: 8px;
+    border-radius: 10px;
+}
+
+.custom-scroll-3::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.custom-scroll-3::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+}
